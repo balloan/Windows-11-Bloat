@@ -37,7 +37,7 @@ $appsList = @(
 
 # Loop through the list and remove each app
 foreach ($app in $appsList) {
-    try: {
+    try {
         Get-AppxPackage -allusers -Name $app | Remove-AppxPackage
     } catch {
         Write-Host "Failed to remove $app"
